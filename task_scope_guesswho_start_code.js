@@ -22,24 +22,28 @@
 
 // // GUESS 2 ///////////////////
 
-let firstName = "Donna";
+// let firstName = "Donna";
 
-const guessWho = function () {
-  const glasses = false;
-  let firstName = "Liz";
-  return `Guess Who is ${firstName}.`;
-};
+// const guessWho = function () {
+//   const glasses = false;
+//   let firstName = "Liz";
+//   return `Guess Who is ${firstName}.`;
+// };
 
-const guess1 = guessWho();
-console.log("guess1: ", guess1);
+// const guess1 = guessWho();
+// console.log("guess1: ", guess1);
 
-const guess2 = `Guess Who is ${firstName}`;
-console.log("guess2: ", guess2);
+// const guess2 = `Guess Who is ${firstName}`;
+// console.log("guess2: ", guess2);
 
 
 // Prediction:
-// - "guess1: Guess Who is Liz." will be logged because the `guessWho` function has its own local `firstName` variable shadowing the outer one, and it returns the local `firstName` which is "Liz".
-// - "guess2: Guess Who is Donna" will be logged because `guess2` directly accesses the `firstName` variable from the outer scope (global scope), which is "Donna".
+
+// "guess1: 
+// Guess Who is Liz." will be logged because the `guessWho` function has its own local `firstName` variable shadowing the outer one, and it returns the local `firstName` which is "Liz".
+
+// "guess2: 
+// Guess Who is Donna" will be logged because `guess2` directly accesses the `firstName` variable from the outer scope (global scope), which is "Donna".
 
 
 
@@ -55,7 +59,7 @@ console.log("guess2: ", guess2);
 
 // const changeHat = function () {
 //   guess.hat = !guess.hat;
-// };
+// }; // 1
 
 // const changeGuess = function (newName) {
 //   guess.firstName = newName;
@@ -69,10 +73,18 @@ console.log("guess2: ", guess2);
 
 // if (guess.hat) {
 //   changeGuess("Chris");
-// }
+// } // 2
+
 
 // const finalAnswer = guessWho();
-// console.log(finalAnswer);
+// console.log(finalAnswer); //3
+
+// Prediction: 
+// "Guess Who is Chris". 
+// 1 -  The `changeHat` function is called, --> `hat` property of the `guess` object toggled to `true`. 
+// 2 -Then, the `if` condition is met, and the `changeGuess` function is called with the argument "Chris", updating the `firstName` property of the `guess` object. 
+// 3 -  `guessWho` function is called, which returns the string with the updated `firstName`. (see notes for detailed explanation of flow)
+
 
 // // GUESS 4 ///////////////////
 
@@ -88,6 +100,12 @@ console.log("guess2: ", guess2);
 
 // const finalAnswer = guessWho();
 // console.log(finalAnswer);
+
+// Prediction: 
+// The output will be "Guess Who is Gail". 
+// if statement is block scoped
+// The `guessWho` function still accesses the outer `firstName` variable (global scope), which remains "Gail".
+
 
 // // GUESS 5 ///////////////////
 
