@@ -109,23 +109,30 @@
 
 // // GUESS 5 ///////////////////
 
-// const guess = {
-//   hair_colour: "blonde",
-//   eye_colour: "brown",
-//   hat: false,
-//   glasses: false,
-//   firstName: "Jennifer",
-// };
+const guess = {
+  hair_colour: "blonde",
+  eye_colour: "brown",
+  hat: false,
+  glasses: false,
+  firstName: "Jennifer",
+};
 
-// const changeGuess = function () {
-//   guess = {
-//     hair_colour: "blonde",
-//     eye_colour: "blue",
-//     hat: false,
-//     glasses: false,
-//     firstName: "Kyle",
-//   };
-// };
+const changeGuess = function () {
+  guess = {
+    hair_colour: "blonde",
+    eye_colour: "blue",
+    hat: false,
+    glasses: false,
+    firstName: "Kyle",
+  };
+};
 
-// changeGuess();
-// console.log(`Guess Who is ${guess.firstName}`);
+changeGuess();
+console.log(`Guess Who is ${guess.firstName}`);
+
+// Prediction: 
+// throw an error. 
+// The `guess` object is declared with `const`, which means its reference cannot be reassigned. 
+// The `changeGuess` function attempts to assign a new object to `guess`, which is not allowed. 
+// Therefore, an error will occur when `changeGuess` is called.
+
