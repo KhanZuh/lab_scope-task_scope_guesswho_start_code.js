@@ -1,18 +1,18 @@
 // // GUESS 1 ///////////////////
-let guess = {
-  hair_colour: "red",
-  eye_colour: "blue",
-  hat: false,
-  glasses: true,
-  firstName: "Joseph",
-};
+// let guess = {
+//   hair_colour: "red",
+//   eye_colour: "blue",
+//   hat: false,
+//   glasses: true,
+//   firstName: "Joseph",
+// };
 
-const guessWho = function () {
-  return `Guess who is ${guess.firstName}`;
-};
+// const guessWho = function () {
+//   return `Guess who is ${guess.firstName}`;
+// };
 
-const finalAnswer = guessWho();
-console.log(finalAnswer);
+// const finalAnswer = guessWho();
+// console.log(finalAnswer);
 // // Prediction:
 // The output will be "Guess who is Joseph". 
 // The guess object is defined at the top level, outside of any function or block, which makes it a global variable and can be accessed within the `guessWho` function. 
@@ -20,30 +20,28 @@ console.log(finalAnswer);
 
 
 
-
-
-
-
-
-
-
-
-
 // // GUESS 2 ///////////////////
 
-// let firstName = "Donna";
+let firstName = "Donna";
 
-// const guessWho = function () {
-//   const glasses = false;
-//   let firstName = "Liz";
-//   return `Guess Who is ${firstName}.`;
-// };
+const guessWho = function () {
+  const glasses = false;
+  let firstName = "Liz";
+  return `Guess Who is ${firstName}.`;
+};
 
-// const guess1 = guessWho();
-// console.log("guess1: ", guess1);
+const guess1 = guessWho();
+console.log("guess1: ", guess1);
 
-// const guess2 = `Guess Who is ${firstName}`;
-// console.log("guess2: ", guess2);
+const guess2 = `Guess Who is ${firstName}`;
+console.log("guess2: ", guess2);
+
+
+// Prediction:
+// - "guess1: Guess Who is Liz." will be logged because the `guessWho` function has its own local `firstName` variable shadowing the outer one, and it returns the local `firstName` which is "Liz".
+// - "guess2: Guess Who is Donna" will be logged because `guess2` directly accesses the `firstName` variable from the outer scope (global scope), which is "Donna".
+
+
 
 // // GUESS 3 ///////////////////
 
