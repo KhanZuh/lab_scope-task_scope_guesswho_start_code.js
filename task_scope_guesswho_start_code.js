@@ -59,7 +59,7 @@
 
 // const changeHat = function () {
 //   guess.hat = !guess.hat;
-// }; // 1
+// }; // A
 
 // const changeGuess = function (newName) {
 //   guess.firstName = newName;
@@ -69,7 +69,7 @@
 //   return `Guess Who is ${guess.firstName}`;
 // };
 
-// changeHat();
+// changeHat(); // 1
 
 // if (guess.hat) {
 //   changeGuess("Chris");
@@ -81,6 +81,7 @@
 
 // Prediction: 
 // "Guess Who is Chris". 
+// A - function changeHat would toggle the value of guess.hat whenever it is called. By toggling, it means it would reverse the current boolean state of guess.hat.
 // 1 -  The `changeHat` function is called, --> `hat` property of the `guess` object toggled to `true`. 
 // 2 -Then, the `if` condition is met, and the `changeGuess` function is called with the argument "Chris", updating the `firstName` property of the `guess` object. 
 // 3 -  `guessWho` function is called, which returns the string with the updated `firstName`. (see notes for detailed explanation of flow)
